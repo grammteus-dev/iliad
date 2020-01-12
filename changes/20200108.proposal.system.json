@@ -1,0 +1,14 @@
+{
+  "type": "proposal",
+  "date": 20200108,
+  "description": "How the system will work",
+  "children": {
+    "authentication": "User authenticates by http",
+    "http api": "An authenticated user can make requests for transliteration via http",
+    "websocket api": "Progressive parsing can be provided by passing partial results over the connection",
+    "parsing": "Use system inspired by parse package",
+    "formats offered": "Start with greek_1 and move on from there",
+    "models": "Should not require any models other than account",
+    "size limits": "Limit the rate at which data is parsed for a single user. This can be tracked as a variable on the account model"
+  }
+}
