@@ -26,9 +26,14 @@ SECRET_KEY = '*tklgerk6a6ajrqhzv!1058o0@7m1a&qg2@o53u$s+5vx8k1js'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-  'ec2-3-8-192-48.eu-west-2.compute.amazonaws.com',
+  'www.grammteus.com',
+  'grammteus.com',
 ]
 
+# TLS
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
 
 # Application definition
 

@@ -69,8 +69,8 @@ def greek(request):
 
   response = JsonResponse(parsed_data)
 
-  response["Access-Control-Allow-Origin"] = "https://master.d3mhogo23ptwg9.amplifyapp.com/"
-  response["Access-Control-Allow-Methods"] = "GET, POST, OPTIONS"
+  response["Access-Control-Allow-Origin"] = "https://master.d3mhogo23ptwg9.amplifyapp.com"
+  response["Access-Control-Allow-Methods"] = "POST, OPTIONS"
   response["Access-Control-Max-Age"] = "1000"
   response["Access-Control-Allow-Headers"] = "X-Requested-With, Content-Type"
 
