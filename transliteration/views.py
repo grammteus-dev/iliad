@@ -1,5 +1,6 @@
 
 import json
+from django.conf import settings
 from django.views.decorators.csrf import csrf_exempt
 from django.shortcuts import render
 from django.http import JsonResponse
@@ -69,7 +70,10 @@ def greek(request):
 
   response = JsonResponse(parsed_data)
 
-  response["Access-Control-Allow-Origin"] = "https://master.d3mhogo23ptwg9.amplifyapp.com"
+  if settings.DEBUG:
+    response["Access-Control-Allow-Origin"] = "http://localhost:3000"
+  else:
+    response["Access-Control-Allow-Origin"] = "https://master.d3mhogo23ptwg9.amplifyapp.com"
   response["Access-Control-Allow-Methods"] = "POST, OPTIONS"
   response["Access-Control-Max-Age"] = "1000"
   response["Access-Control-Allow-Headers"] = "X-Requested-With, Content-Type"

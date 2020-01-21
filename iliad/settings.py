@@ -28,6 +28,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
   'www.grammteus.com',
   'grammteus.com',
+  'localhost',
 ]
 
 # TLS
